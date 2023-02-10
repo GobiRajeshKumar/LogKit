@@ -1,7 +1,7 @@
 import Foundation
 
 public struct LogKit {
-    private init() { }
+    
     fileprivate enum LogLevel {
         case info
         case warning
@@ -29,50 +29,32 @@ public struct LogKit {
     }
     
     static func info(_ message: String, shouldLogContext: Bool = true){
-        let file = #file
-        let line = #line
-        let function = #function
-        let context = Context(file: file, line: line, function: function)
+        let context = Context(file: #file, line: #line, function: #function)
         LogKit.handleLog(level: .info, str: message, shouldLogContext: shouldLogContext, context: context)
     }
     
     static func warning(_ message: String, shouldLogContext: Bool = true){
-        let file = #file
-        let line = #line
-        let function = #function
-        let context = Context(file: file, line: line, function: function)
+        let context = Context(file: #file, line: #line, function: #function)
         LogKit.handleLog(level: .warning, str: message, shouldLogContext: shouldLogContext, context: context)
     }
     
     static func error(_ message: String, shouldLogContext: Bool = true){
-        let file = #file
-        let line = #line
-        let function = #function
-        let context = Context(file: file, line: line, function: function)
+        let context = Context(file: #file, line: #line, function: #function)
         LogKit.handleLog(level: .error, str: message, shouldLogContext: shouldLogContext, context: context)
     }
     
     static func debug(_ message: String, shouldLogContext: Bool = true){
-        let file = #file
-        let line = #line
-        let function = #function
-        let context = Context(file: file, line: line, function: function)
+        let context = Context(file: #file, line: #line, function: #function)
         LogKit.handleLog(level: .debug, str: message, shouldLogContext: shouldLogContext, context: context)
     }
     
     static func onBuild(_ message: String, shouldLogContext: Bool = true){
-        let file = #file
-        let line = #line
-        let function = #function
-        let context = Context(file: file, line: line, function: function)
+        let context = Context(file: #file, line: #line, function: #function)
         LogKit.handleLog(level: .onBuild, str: message, shouldLogContext: shouldLogContext, context: context)
     }
     
     static func succeed(_ message: String, shouldLogContext: Bool = true){
-        let file = #file
-        let line = #line
-        let function = #function
-        let context = Context(file: file, line: line, function: function)
+        let context = Context(file: #file, line: #line, function: #function)
         LogKit.handleLog(level: .succeed, str: message, shouldLogContext: shouldLogContext, context: context)
     }
     
