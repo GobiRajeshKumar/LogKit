@@ -13,17 +13,17 @@ public struct LogKit {
         fileprivate var prefix: String {
             switch self {
             case .info:
-                return "INFO <- ❓"
+                return "INFO ❓"
             case .warning:
-                return "WARNING <- ⚠️"
+                return "WARNING ⚠️"
             case .error:
-                return "ERROR <- ❌"
+                return "ERROR ❌"
             case .debug:
                 return "DEBUG"
             case .onBuild:
-                return "BUILDING <- 🛠"
+                return "BUILDING 🛠"
             case .success:
-                return "SUCCESS <- 💜💛💙"
+                return "SUCCESS 💜💛💙"
             }
         }
     }
@@ -63,7 +63,7 @@ public struct LogKit {
         var line: Int
         var function: String
         var description: String {
-            return "\((file as NSString).lastPathComponent): \(line) \(function)"
+            return "\((file as NSString).lastPathComponent) : \(line) \(function)"
         }
     }
     
