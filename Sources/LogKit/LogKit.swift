@@ -21,7 +21,7 @@ public struct LogKit {
             case .debug:
                 return "DEBUG"
             case .onBuild:
-                return "BUILDING 🛠"
+                return "BUILDING 🛠🔥🔥"
             case .success:
                 return "SUCCESS 💜💛💙"
             }
@@ -63,7 +63,7 @@ public struct LogKit {
         var line: Int
         var function: String
         var description: String {
-            return "\((file as NSString).lastPathComponent): \(line) <- \(function)"
+            return "\((file as NSString).lastPathComponent): \(line) -> \(function)"
         }
     }
     
